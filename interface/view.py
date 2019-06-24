@@ -41,6 +41,10 @@ class View(QMainWindow):
     def crypte(self):
         if self.vigenere_hill is None:
             self.check_key()
+        self.champs_comatrice.reset()
+        self.champs_comatrice_transpose.reset()
+        self.champs_inverse.reset()
+        self.compliment.setValue(0)
         text = self.texte_input.toPlainText()
         interm, output = self.vigenere_hill.crypt(text)
         self.texte_interm.setPlainText(interm)

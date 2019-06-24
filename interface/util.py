@@ -69,3 +69,8 @@ class Matrice:
         for i in range(len(self.compenent)):
             for j in range(len(self.compenent[0])):
                 self.compenent[i][j].setValue(tab[i][j])
+
+    def reset(self):
+        for i in range(len(self.compenent)):
+            for j in range(len(self.compenent[0])):
+                self.compenent[i][j].setValue(0)

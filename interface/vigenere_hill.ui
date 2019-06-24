@@ -1,242 +1,251 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
-    <class>vigenere_hill</class>
-    <widget class="QMainWindow" name="vigenere_hill">
-        <property name="geometry">
-            <rect>
-                <x>0</x>
-                <y>0</y>
-                <width>800</width>
-                <height>600</height>
-            </rect>
+ <class>vigenere_hill</class>
+ <widget class="QMainWindow" name="vigenere_hill">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Application Vigenere Hill</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <property name="spacing">
+       <number>6</number>
+      </property>
+      <property name="leftMargin">
+       <number>10</number>
+      </property>
+      <property name="topMargin">
+       <number>10</number>
+      </property>
+      <property name="rightMargin">
+       <number>10</number>
+      </property>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <property name="bottomMargin">
+         <number>0</number>
         </property>
-        <property name="windowTitle">
-            <string>Application Vigenere Hill</string>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_7">
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_5">
+            <property name="text">
+             <string>Texte a traite</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPlainTextEdit" name="texte_input"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_9">
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>Resultat intermidaire</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPlainTextEdit" name="texte_interm"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_10">
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>Resultat de traitement</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPlainTextEdit" name="texte_output"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_8">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Cle de hill</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QGridLayout" name="key_hill"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>Cle de vigenere</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+            </property>
+            <property name="margin">
+             <number>0</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="key_vigenere"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_test">
+            <property name="text">
+             <string>Test les cles</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_crypt">
+            <property name="text">
+             <string>Chiffrer</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_decrypt">
+            <property name="text">
+             <string>Dechiffrer</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <property name="spacing">
+         <number>6</number>
         </property>
-        <widget class="QWidget" name="centralwidget">
-            <layout class="QVBoxLayout" name="verticalLayout">
-                <item>
-                    <layout class="QVBoxLayout" name="verticalLayout_2">
-                        <property name="spacing">
-                            <number>6</number>
-                        </property>
-                        <item>
-                            <layout class="QHBoxLayout" name="horizontalLayout">
-                                <property name="bottomMargin">
-                                    <number>0</number>
-                                </property>
-                                <item>
-                                    <layout class="QVBoxLayout" name="verticalLayout_7">
-                                        <property name="rightMargin">
-                                            <number>0</number>
-                                        </property>
-                                        <item>
-                                            <widget class="QLabel" name="label_5">
-                                                <property name="text">
-                                                    <string>Texte a traite</string>
-                                                </property>
-                                                <property name="alignment">
-                                                    <set>Qt::AlignCenter</set>
-                                                </property>
-                                            </widget>
-                                        </item>
-                                        <item>
-                                            <widget class="QPlainTextEdit" name="texte_input"/>
-                                        </item>
-                                    </layout>
-                                </item>
-                                <item>
-                                    <layout class="QVBoxLayout" name="verticalLayout_9">
-                                        <property name="rightMargin">
-                                            <number>0</number>
-                                        </property>
-                                        <item>
-                                            <widget class="QLabel" name="label_4">
-                                                <property name="text">
-                                                    <string>Resultat intermidaire</string>
-                                                </property>
-                                                <property name="alignment">
-                                                    <set>Qt::AlignCenter</set>
-                                                </property>
-                                            </widget>
-                                        </item>
-                                        <item>
-                                            <widget class="QPlainTextEdit" name="texte_interm"/>
-                                        </item>
-                                    </layout>
-                                </item>
-                                <item>
-                                    <layout class="QVBoxLayout" name="verticalLayout_10">
-                                        <property name="rightMargin">
-                                            <number>0</number>
-                                        </property>
-                                        <item>
-                                            <widget class="QLabel" name="label_3">
-                                                <property name="text">
-                                                    <string>Resultat de traitement</string>
-                                                </property>
-                                                <property name="alignment">
-                                                    <set>Qt::AlignCenter</set>
-                                                </property>
-                                            </widget>
-                                        </item>
-                                        <item>
-                                            <widget class="QPlainTextEdit" name="texte_output"/>
-                                        </item>
-                                    </layout>
-                                </item>
-                                <item>
-                                    <layout class="QVBoxLayout" name="verticalLayout_8">
-                                        <item>
-                                            <widget class="QLabel" name="label">
-                                                <property name="text">
-                                                    <string>Cle de hill</string>
-                                                </property>
-                                                <property name="alignment">
-                                                    <set>Qt::AlignBottom|Qt::AlignHCenter</set>
-                                                </property>
-                                            </widget>
-                                        </item>
-                                        <item>
-                                            <layout class="QGridLayout" name="key_hill"/>
-                                        </item>
-                                        <item>
-                                            <widget class="QLabel" name="label_2">
-                                                <property name="text">
-                                                    <string>Cle de vigenere</string>
-                                                </property>
-                                                <property name="alignment">
-                                                    <set>Qt::AlignBottom|Qt::AlignHCenter</set>
-                                                </property>
-                                                <property name="margin">
-                                                    <number>0</number>
-                                                </property>
-                                            </widget>
-                                        </item>
-                                        <item>
-                                            <widget class="QLineEdit" name="key_vigenere"/>
-                                        </item>
-                                        <item>
-                                            <widget class="QPushButton" name="btn_test">
-                                                <property name="text">
-                                                    <string>Test les cles</string>
-                                                </property>
-                                            </widget>
-                                        </item>
-                                        <item>
-                                            <widget class="QPushButton" name="btn_crypt">
-                                                <property name="text">
-                                                    <string>Chiffrer</string>
-                                                </property>
-                                            </widget>
-                                        </item>
-                                        <item>
-                                            <widget class="QPushButton" name="btn_decrypt">
-                                                <property name="text">
-                                                    <string>Dechiffrer</string>
-                                                </property>
-                                            </widget>
-                                        </item>
-                                    </layout>
-                                </item>
-                            </layout>
-                        </item>
-                        <item>
-                            <layout class="QHBoxLayout" name="horizontalLayout_2">
-                                <property name="spacing">
-                                    <number>6</number>
-                                </property>
-                                <property name="topMargin">
-                                    <number>0</number>
-                                </property>
-                                <property name="bottomMargin">
-                                    <number>20</number>
-                                </property>
-                                <item>
-                                    <layout class="QVBoxLayout" name="verticalLayout_4">
-                                        <item>
-                                            <widget class="QLabel" name="label_inverse">
-                                                <property name="text">
-                                                    <string>inverse de la matrice</string>
-                                                </property>
-                                                <property name="alignment">
-                                                    <set>Qt::AlignCenter</set>
-                                                </property>
-                                            </widget>
-                                        </item>
-                                        <item>
-                                            <layout class="QGridLayout" name="inverse"/>
-                                        </item>
-                                    </layout>
-                                </item>
-                                <item>
-                                    <layout class="QVBoxLayout" name="verticalLayout_6">
-                                        <item>
-                                            <widget class="QLabel" name="label_comatrice">
-                                                <property name="text">
-                                                    <string>comatrice</string>
-                                                </property>
-                                                <property name="alignment">
-                                                    <set>Qt::AlignCenter</set>
-                                                </property>
-                                            </widget>
-                                        </item>
-                                        <item>
-                                            <layout class="QGridLayout" name="comatrice"/>
-                                        </item>
-                                    </layout>
-                                </item>
-                                <item>
-                                    <layout class="QVBoxLayout" name="verticalLayout_5">
-                                        <item>
-                                            <widget class="QLabel" name="label_comatrice_transpose">
-                                                <property name="text">
-                                                    <string>transpose de la matrice</string>
-                                                </property>
-                                                <property name="alignment">
-                                                    <set>Qt::AlignCenter</set>
-                                                </property>
-                                            </widget>
-                                        </item>
-                                        <item>
-                                            <layout class="QGridLayout" name="comatrice_transpose"/>
-                                        </item>
-                                    </layout>
-                                </item>
-                                <item>
-                                    <layout class="QVBoxLayout" name="verticalLayout_3">
-                                        <property name="bottomMargin">
-                                            <number>20</number>
-                                        </property>
-                                        <item>
-                                            <widget class="QLabel" name="label_10">
-                                                <property name="text">
-                                                    <string>compliment</string>
-                                                </property>
-                                                <property name="alignment">
-                                                    <set>Qt::AlignBottom|Qt::AlignHCenter</set>
-                                                </property>
-                                            </widget>
-                                        </item>
-                                        <item>
-                                            <widget class="QSpinBox" name="compliment">
-                                                <property name="enabled">
-                                                    <bool>false</bool>
-                                                </property>
-                                                <property name="alignment">
-                                                    <set>Qt::AlignCenter</set>
-                                                </property>
-                                            </widget>
-                                        </item>
-                                    </layout>
-                                </item>
-                            </layout>
-                        </item>
-                    </layout>
-                </item>
-            </layout>
-        </widget>
-    </widget>
-    <resources/>
-    <connections/>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>20</number>
+        </property>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QLabel" name="label_inverse">
+            <property name="text">
+             <string>inverse de la matrice</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QGridLayout" name="inverse"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <item>
+           <widget class="QLabel" name="label_comatrice">
+            <property name="text">
+             <string>comatrice</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QGridLayout" name="comatrice"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <widget class="QLabel" name="label_comatrice_transpose">
+            <property name="text">
+             <string>transpose de la matrice</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QGridLayout" name="comatrice_transpose"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <property name="bottomMargin">
+           <number>20</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_10">
+            <property name="text">
+             <string>compliment</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="compliment">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
 </ui>
